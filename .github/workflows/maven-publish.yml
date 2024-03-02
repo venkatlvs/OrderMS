@@ -32,3 +32,9 @@ jobs:
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
+    
+    - name: Analyze with SonarQube
+
+        # You can pin the exact commit or the version.
+        # uses: SonarSource/sonarqube-scan-action@v1.1.0
+      uses: SonarSource/sonarqube-scan-action@7295e71c9583053f5bf40e9d4068a0c974603ec8
